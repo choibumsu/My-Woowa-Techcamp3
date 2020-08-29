@@ -1,0 +1,102 @@
+@import '_definitions';
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .wrap {
+    @include container-box();
+    max-width: 440px;
+    background-color: $color-white;
+    padding: 40px 55px;
+    margin-bottom: 30px;
+
+    .title {
+      margin-bottom: 30px;
+
+      img {
+        height: 43px;
+      }
+
+      strong {
+        margin-top: 10px;
+        display: block;
+
+        font: {
+          weight: 300;
+          size: 40px;
+        }
+      }
+    }
+
+    .nav-main {
+      color: $color-main;
+
+      font: {
+        weight: 600;
+        size: 20px;
+      }
+    }
+
+    .user-info {
+      padding: 15px;
+      width: 300px;
+      border: 1px solid $color-gray-300;
+      margin: {
+        top: 15px;
+        bottom: 10px;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .info-wrapper:first-child {
+        .sub-title {
+          margin-top: 0px;
+        }
+      }
+      .info-wrapper:last-child {
+        .sub-title {
+          margin-top: 20px;
+        }
+      }
+
+      .sub-title {
+        color: $color-gray-500;
+        font-size: 16px;
+        margin: {
+          top: 20px;
+          bottom: 10px;
+        }
+      }
+
+      .info-item {
+        display: flex;
+        font-size: 14px;
+
+        .key {
+          width: 60px;
+          color: $color-gray-500;
+        }
+
+        .value {
+          text-align: left;
+        }
+      }
+      .info-item + .info-item {
+        margin-top: 8px;
+      }
+    }
+
+    .desc {
+      color: $color-gray-500;
+      font-size: 12px;
+
+      a {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}

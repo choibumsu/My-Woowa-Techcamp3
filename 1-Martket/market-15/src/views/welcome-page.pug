@@ -1,0 +1,44 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/static/stylesheets/css/welcome.css')
+  link(rel='stylesheet' href='/static/stylesheets/css/reset.css')
+  link(rel='stylesheet' href='/static/stylesheets/css/base.css')
+  title 배민상회;
+main.main
+  section.wrap
+    h1.title
+      img(src='/static/images/logo.png' alt='배민 사장님광장 회원이 되셨습니다.')
+      strong 회원이 되셨습니다.
+    a.nav-main(href='/') 메인으로 →
+    article.user-info
+      .info-wrapper  
+        h3.sub-title 회원정보
+        .info-item
+          .key 이름
+          .value #{name}
+        .info-item
+          .key 아이디
+          .value #{id}
+        .info-item
+          .key 이메일
+          .value #{emailPrefix}@#{emailSuffix}
+        .info-item
+          .key 휴대폰
+          .value #{phone}
+      .info-wrapper
+        h3.sub-title 광고성 정보 수신 동의 안내
+        .info-item
+          .key 전송자
+          .value 배민사장님광장
+        .info-item
+          .key 처리날짜
+          .value 2020-07-10
+        .info-item
+          .key 처리결과
+          .value #{isOptionalTerm ? '수신동의' : '수신거부 처리완료'}
+    .desc
+      | · 위 내용은
+      a(href='https://www.youtube.com/channel/UC-mOekGSesms0agFntnQang') 내 정보 관리
+      | 에서 수정하실 수 있습니다.

@@ -1,0 +1,16 @@
+@import '_definitions.scss';
+.woowa-btn {
+  background: $color-main;
+  border: 0;
+  margin: 0;
+  padding: 22px 0 20px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+body {
+  background-color: $color-point;
+}

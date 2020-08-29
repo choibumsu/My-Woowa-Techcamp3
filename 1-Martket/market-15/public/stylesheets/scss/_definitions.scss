@@ -1,0 +1,33 @@
+/* font */
+$font-main: 'Noto Sans KR';
+
+/* colors */
+// input normal border, placeholder
+$color-gray-300: #d7dbe6;
+
+// button border
+$color-gray-400: #cccccc;
+
+$color-gray-500: #bbc0cd;
+
+// help text, button border
+$color-gray-600: #898989;
+
+// outter border
+$color-gray-700: rgb(70, 70, 70);
+
+// plain text, title, etc black text
+$color-gray-900: #212329;
+
+$color-white: rgb(255, 255, 255);
+$color-black: #111111;
+
+$color-point: #2ac1bc;
+$color-main: #1a7cff;
+$color-error: #f52926;
+
+@mixin container-box() {
+  box-shadow: 18px 15px #00000020;
+  border: 1px solid $color-gray-700;
+  border-radius: 4px;
+}

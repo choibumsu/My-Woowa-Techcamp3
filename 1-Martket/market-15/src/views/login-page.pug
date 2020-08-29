@@ -1,0 +1,25 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title 배민사장님광장
+  link(rel='stylesheet' href='/static/stylesheets/css/reset.css')
+  link(rel='stylesheet' href='/static/stylesheets/css/base.css')
+  link(rel='stylesheet' href='/static/stylesheets/css/login.css')
+main#login-container
+  .logo-wrapper
+    img.logo(src='/static/images/logo.png' alt='logo')
+  .login-form
+    .error-message
+    input(type='text' name="id" placeholder='아이디')
+    input(type='password' name="password" placeholder='비밀번호')
+    .bottom-row
+      .id-save-wrapper
+        input#is-save-id(type='checkbox')
+        label(for='is-save-id') 아이디 저장
+      .link-wrapper
+        a(href='' onclick='alert("Comming Soon..")') 아이디 / 비밀번호 찾기
+        a(href='/join') 회원가입
+  .button-row
+    .woowa-btn 로그인
+  script(type='module' src='/static/javascripts/pages/LoginPage.js')
