@@ -1,0 +1,46 @@
+@import '../common/definitions';
+
+.sidebar {
+  height: calc(100vh - 60px);
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: $width-sidebar;
+  color: $color-black;
+  background-color: $color-white;
+  $border-line: solid 1px $color-gray-300;
+  z-index: 1;
+  right: 0px;
+  overflow-y: auto;
+  animation: show-sidebar 0.5s cubic-bezier(0, 0, 0, 1);
+  border: {
+    top: $border-line;
+    left: $border-line;
+    right: $border-line;
+  }
+
+  .menu,
+  .activity {
+    display: flex;
+    align-items: center;
+    background-color: $color-gray-200;
+    border-bottom: solid 0.5px $color-gray-300;
+    width: 100%;
+    padding: 7px;
+    font-size: 18px;
+
+    img {
+      margin-right: 10px;
+      height: 18px;
+    }
+  }
+}
+
+@keyframes show-sidebar {
+  0% {
+    transform: translateX(360px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

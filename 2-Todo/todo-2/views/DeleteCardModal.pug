@@ -1,0 +1,15 @@
+extends Modal.pug
+
+block variables
+  - var modal_id = 'deleteCard'
+
+
+block header
+  div Delete note 
+
+block content
+  p Note
+  textarea(disabled)
+
+block button
+  button(id="delete-card-button") Delete note

@@ -1,0 +1,35 @@
+@import '../common/definitions';
+
+.column-form {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  min-width: $width-column;
+  max-width: $width-column;
+  border: 1px dashed $color-gray-500;
+  border-radius: 6px;
+  padding: 16px;
+
+  .column-title-input {
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid $color-gray-200;
+    border-radius: 4px;
+    padding: 8px 12px;
+  }
+
+  .column-form-submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: $color-white;
+    background-color: $color-green;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &.unactive {
+      background-color: $color-light-green;
+    }
+  }
+}

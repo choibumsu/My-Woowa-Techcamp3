@@ -1,0 +1,80 @@
+@import '../common/definitions';
+
+.card-form {
+  font-size: 0;
+  margin: {
+    top: 8px;
+    bottom: 11px;
+  }
+  pointer-events: none;
+
+  .card-form-textarea {
+    min-width: 100%;
+    min-height: 60px;
+    max-height: 500px;
+    font-size: 14px;
+    border: 1px solid $color-gray-300;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    resize: vertical;
+    pointer-events: all;
+  }
+
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+
+    .btn-wrapper {
+      width: 50%;
+
+      &:first-child {
+        .btn {
+          margin-right: 5px;
+        }
+      }
+
+      &:last-child {
+        .btn {
+          margin-left: 5px;
+        }
+      }
+
+      .btn {
+        $color-btn-border: #1b1f0f;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        padding-top: 3px;
+        border-radius: 6px;
+        border: 1px solid unquote($color-btn-border + '26');
+        font: {
+          size: 14px;
+          weight: 500;
+        }
+        box-shadow: 0 1px 0 unquote($color-btn-border + '20'),
+          inset 0 1px 0 hsla(0, 0%, 100%, 0.03);
+        cursor: pointer;
+        pointer-events: all;
+
+        &.card-form-add-btn {
+          background-color: $color-green;
+          color: $color-white;
+
+          &.unactive {
+            background-color: $color-light-green;
+            border: 1px solid unquote($color-btn-border + '20');
+            cursor: unset;
+          }
+        }
+
+        &.card-form-cancel-btn {
+          background-color: $color-gray-100;
+          color: $color-gray-900;
+        }
+      }
+    }
+  }
+}

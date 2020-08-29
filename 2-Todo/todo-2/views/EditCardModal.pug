@@ -1,0 +1,14 @@
+extends Modal.pug
+
+block variables
+  - var modal_id = 'editCard'
+
+block header
+  div Edit note
+
+block content
+  p Note
+  textarea
+
+block button
+  button(id="editCardButton") Save note

@@ -1,0 +1,11 @@
+block variables
+.modal-box(id=modal_id).dp-none
+    .big-box
+    .modal
+        .modal-header
+            block header
+            img(id='close',src='/static/images/remove-btn.svg')
+        .modal-content
+            block content
+            block button
+

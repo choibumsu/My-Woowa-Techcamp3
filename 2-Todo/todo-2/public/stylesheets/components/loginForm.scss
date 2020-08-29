@@ -1,0 +1,65 @@
+@import '../common/definitions';
+
+#login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-gray-900;
+  z-index: 1000;
+
+  .login-container {
+    width: $width-modal;
+    background-color: $color-white;
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 25px;
+
+    > .title {
+      font: {
+        size: 20px;
+        weight: 600;
+      }
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      height: 46px;
+      font-size: 16px;
+      border: 1px solid $color-gray-300;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .login-form-login-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 50px;
+      background-color: $color-green;
+      color: $color-white;
+      font: {
+        size: 18px;
+        weight: 500;
+      }
+      border-radius: 6px;
+      padding-top: 2px;
+      cursor: pointer;
+
+      &.unactive {
+        background-color: $color-light-green;
+      }
+
+      &:not(.unactive) {
+        &:hover {
+          filter: saturate(2);
+        }
+      }
+    }
+  }
+}

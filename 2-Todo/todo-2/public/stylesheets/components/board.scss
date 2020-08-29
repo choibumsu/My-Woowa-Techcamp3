@@ -1,0 +1,9 @@
+@import '../common/definitions';
+
+.board {
+  display: flex;
+  height: calc(100vh - #{$height-nav});
+  padding: 16px 0;
+  margin: 0 16px;
+  overflow-x: scroll;
+}

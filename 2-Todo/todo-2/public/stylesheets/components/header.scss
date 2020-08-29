@@ -1,0 +1,58 @@
+@import '../common/definitions';
+
+header {
+  &#page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-black;
+    height: $height-nav;
+    padding: 0 16px;
+
+    * {
+      color: $color-white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .left-side {
+      display: flex;
+      align-items: center;
+
+      .title {
+        margin-right: 20px;
+      }
+
+      .username-wrapper {
+        display: flex;
+        align-items: center;
+
+        * {
+          color: $color-light-green;
+        }
+      }
+    }
+
+    .right-side {
+      display: flex;
+
+      .logout-btn {
+        margin-right: 20px;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-danger;
+          filter: saturate(1.5);
+        }
+      }
+
+      .header-menu {
+        cursor: pointer;
+
+        &:hover {
+          color: $color-green;
+        }
+      }
+    }
+  }
+}

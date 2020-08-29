@@ -1,0 +1,30 @@
+@import '../common/definitions';
+
+#activity__card {
+  padding: 16px;
+  background-color: $color-white;
+  border-bottom: solid 1px$color-gray-300;
+  min-height: 50px;
+
+  .content {
+    font-size: 17px;
+  }
+
+  .highlight {
+    font-weight: 600;
+
+    &.blue {
+      color: $color-blue;
+    }
+
+    &.black {
+      color: $color-black;
+    }
+  }
+
+  .time {
+    margin-top: 8px;
+    color: $color-gray-700;
+    font-size: 13px;
+  }
+}

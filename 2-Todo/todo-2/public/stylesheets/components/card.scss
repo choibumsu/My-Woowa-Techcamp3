@@ -1,0 +1,86 @@
+@import '../common/definitions';
+
+.card {
+  width: 100%;
+  margin-bottom: 8px;
+
+  body:not(.grabbing) & {
+    cursor: move;
+  }
+
+  &:last-child {
+    margin-bottom: 3px;
+  }
+
+  &.moving {
+    background-color: $color-gray-300;
+    opacity: 0.5;
+  }
+
+  &.copy {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+  .card-content {
+    display: flex;
+    background-color: $color-white;
+    border: 1px solid $color-gray-300;
+    border-radius: 6px;
+    box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
+    padding: 8px;
+
+    &:hover {
+      border-color: $color-gray-400;
+      box-shadow: 0 1px 3px rgba(106, 115, 125, 0.3);
+    }
+
+    .document-icon {
+      width: 16px;
+      height: 16px;
+      margin: {
+        top: 1px;
+        right: 8px;
+      }
+    }
+
+    .content-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .content-wrapper {
+        > .card-title {
+          color: $color-gray-900;
+          font: {
+            size: 14px;
+          }
+          line-height: 1.5;
+          word-break: break-all;
+          margin-bottom: 10px;
+        }
+
+        .added-by {
+          font-size: 12.6px;
+          color: $color-gray-700;
+
+          .strong {
+            color: $color-gray-900;
+          }
+        }
+      }
+
+      .card-remove-btn {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        cursor: pointer;
+
+        &:hover {
+          filter: saturate(10);
+        }
+      }
+    }
+  }
+}

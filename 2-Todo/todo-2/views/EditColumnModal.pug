@@ -1,0 +1,14 @@
+extends Modal.pug
+
+block variables
+  - var modal_id = 'editColumn'
+
+block header
+  div Edit Column
+
+block content
+  p Column name
+  input(type="text")
+
+block button
+  button(id="editColumndButton") Update column

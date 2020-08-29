@@ -1,0 +1,116 @@
+@import '../common/definitions';
+
+.column-container {
+  display: flex;
+  height: calc(100vh - #{$height-nav});
+  padding: 16px 0;
+  margin: 0 16px;
+  overflow-x: scroll;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: $width-column;
+  max-width: $width-column;
+  height: 100%;
+  background-color: $color-gray-200;
+  padding: 8px;
+  border: 1px solid $color-gray-300;
+  border-radius: 6px;
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.moving {
+    background-color: $color-gray-500;
+    opacity: 0.2;
+  }
+
+  &.copy {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+  .title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 11px;
+    pointer-events: none;
+
+    .title-wrapper {
+      display: flex;
+      align-items: center;
+      padding-left: 4px;
+
+      .card-count {
+        $size: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: $size;
+        height: $size;
+        border-radius: $size;
+        background-color: $color-gray-400;
+        color: $color-gray-700;
+        font: {
+          size: 12px;
+          weight: 500;
+        }
+        padding: 6px 5px 5px 5px;
+        margin-right: 8px;
+      }
+
+      > .column-title {
+        font: {
+          size: 14px;
+          weight: 600;
+        }
+        margin-top: 2px;
+        cursor: pointer;
+        pointer-events: all;
+      }
+    }
+
+    .btn-wrapper {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin: 0;
+        cursor: pointer;
+        pointer-events: all;
+
+        &:hover {
+          /* 채도를 높여주는 속성 */
+          filter: saturate(10);
+        }
+
+        &.column-add-btn {
+          width: 16px;
+          height: 16px;
+          margin-right: 13px;
+        }
+
+        &.column-remove-btn {
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+  }
+
+  .card-form-slot {
+    pointer-events: none;
+  }
+
+  > .content-container {
+    height: inherit;
+    overflow-y: scroll;
+  }
+}
