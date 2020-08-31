@@ -1,0 +1,130 @@
+@use '@/static/styles/package' as *;
+
+#payment-modal {
+  .modal-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-black;
+    opacity: 0.7;
+  }
+
+  .modal {
+    $L-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(50vh - #{$height-modal} / 2);
+    left: calc(50vw - #{$width-modal} / 2);
+    z-index: 4000;
+    width: $width-modal;
+    // height: $height-modal;
+    background-color: $color-white;
+    border-radius: 6px;
+
+    .modal-header {
+      $L-padding: 10px;
+
+      * {
+        color: $color-white;
+      }
+
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: $height-main;
+      padding: 0 $L-padding;
+      border-radius: $L-radius $L-radius 0 0;
+      background-color: $color-main;
+
+      .modal-title {
+        margin-left: 10px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .close-btn {
+        $L-size: 20px;
+        right: $L-padding;
+        top: calc(#{$height-main} / 2 - #{$L-size} / 2);
+        font-size: $L-size;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-gray-400;
+        }
+      }
+    }
+
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      height: $height-modal - $height-main;
+      overflow-y: scroll;
+
+      .payment-form {
+        display: flex;
+        margin-bottom: 20px;
+
+        input {
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid $color-gray-800;
+          outline: none;
+          font-size: 18px;
+          text-align: center;
+          text-align-last: center;
+
+          &::placeholder {
+            color: $color-gray-400;
+          }
+        }
+
+        .button-add-payment {
+          min-width: 65px;
+          border: 1px solid $color-main;
+          border-radius: 6px;
+          background-color: $color-sub-main;
+          color: $color-white;
+          font-size: 15px;
+          margin-left: 8px;
+
+          &:hover {
+            background-color: $color-main;
+          }
+        }
+      }
+
+      .payment-list {
+        overflow-y: scroll;
+
+        .payment-row {
+          align-items: center;
+          padding: 8px 8px;
+          border-bottom: 1px solid $color-gray-200;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .remove-btn {
+            font-size: 22px;
+            color: $color-gray-500;
+            cursor: pointer;
+
+            &:hover {
+              color: $color-black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

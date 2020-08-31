@@ -1,0 +1,6 @@
+@use '@/static/styles/package' as *;
+
+#router-content {
+  width: $width-container;
+  margin: 0 auto;
+}

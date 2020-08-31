@@ -1,13 +1,13 @@
-## 배민 상회 로그인 시스템 구현
+# 🔑 배민 상회 로그인 시스템 구현
 
-## Project Repository
+## 🏡 Project Repository
 
 [woowa-techcamp-market-15](https://github.com/woowa-techcamp-2020/market-15)  
 [Github Wiki](https://github.com/woowa-techcamp-2020/market-15/wiki/Convention)
 
 ---
 
-## 기억할 점
+## 📝 기억할 점
 
 ### SCSS
 
@@ -134,7 +134,7 @@ export default function example(props) {
    사용자가 정보를 입력하는 부분을 검증해야 하는데, 검증을 해야하는 컴포넌트에는 `validate`라는 이름의 메소드를 포함하도록 구성  
    제출하는 부분에서 컴포넌트들의 validate 메소드만 호출할 수 있도록 추상화
 
-## 배운 것
+## 🧑🏻‍💻 배운 것
 
 - **HTTP Status Code**  
    HTTP 상태 코드에 대해 어렴풋이 알았는데, 이번에 프로젝트를 통해 어떤 상태 코드들이 있는지 살펴보게 되었다.  
@@ -179,7 +179,7 @@ export default function example(props) {
 
 ---
 
-## 회고
+## 🤔 회고
 
 **1. 동료**  
  우테캠에서 첫번째 팀 프로젝트고, 팀 인원도 2명 밖에 없어서 팀원이 어떤 사람일까 많이 궁금했는데 동욱이형이라는 좋은 사람을 만나서 다행이였다.  

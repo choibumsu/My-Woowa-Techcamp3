@@ -1,0 +1,142 @@
+@use '@/static/styles/package' as *;
+
+#invoice-list {
+  .invoice-wrapper {
+    width: 100%;
+
+    .date-row {
+      border-top: 1px solid $color-gray-600;
+      align-items: center;
+      padding: 11px 4px;
+
+      .item {
+        justify-content: flex-end;
+
+        .date {
+          font-size: 16px;
+          font-weight: 600;
+          margin-right: 8px;
+        }
+
+        .day {
+          font-size: 16px;
+          color: $color-gray-800;
+        }
+      }
+      .sum-box {
+        font-size: 14px;
+        font-weight: 200;
+        display: flex;
+
+        .earning-sum-box {
+          margin-right: 5px;
+          * {
+            color: $color-main;
+          }
+        }
+
+        .spending-sum-box * {
+          color: $color-complementary;
+        }
+      }
+    }
+
+    .invoice {
+      align-items: center;
+      border-top: 1px solid $color-gray-400;
+      padding: 5px 4px;
+      position: relative;
+      &.highlight {
+        background-color: unquote($color-sub-main + '30');
+      }
+      .button-edit,
+      .date {
+        display: none;
+      }
+
+      &:hover {
+        .float {
+          $L-width: 50px;
+          display: flex;
+          left: calc(40% - #{$L-width} / 2);
+          flex-direction: row;
+          align-items: center;
+
+          .button-edit {
+            display: flex;
+            justify-content: left;
+            width: $L-width;
+            border: none;
+            background-color: transparent;
+            color: $color-main;
+            cursor: pointer;
+          }
+          .date {
+            opacity: 0.4;
+            font-size: 13px;
+            display: flex;
+            margin-right: 40px;
+            justify-content: right;
+          }
+        }
+      }
+
+      &.earning {
+        .category {
+          background-color: $color-main;
+        }
+        .amount,
+        .amount-pre,
+        .amount-post {
+          color: $color-main;
+        }
+      }
+
+      &.spending {
+        .category {
+          background-color: $color-complementary;
+        }
+        .amount,
+        .amount-pre,
+        .amount-post {
+          color: $color-complementary;
+        }
+      }
+
+      .item {
+        align-items: center;
+
+        &.left {
+          .category {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 95px;
+            border-radius: 30px;
+            padding: 8px;
+            margin-right: 20px;
+            color: $color-white;
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+
+        &.right {
+          width: 40%;
+
+          .payment {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+          }
+
+          .amount-pre {
+            display: flex;
+            justify-content: flex-end;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+@use '@/static/styles/package' as *;
+
+#invoice-form {
+  $L-border-radius: 10px;
+  $L-padding: 20px;
+
+  position: relative;
+  background-color: $color-gray-100;
+  border-radius: $L-border-radius;
+  padding: $L-padding $L-padding 0 $L-padding;
+
+  .float {
+    top: 10px;
+    right: 10px;
+
+    button {
+      border: none;
+      background-color: transparent;
+      color: $color-main;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-sub-main;
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    min-height: 30px;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .item {
+      flex: 1 1 0px;
+      display: flex;
+      align-items: center;
+
+      &.amount-item {
+        position: relative;
+
+        input {
+          text-align: end;
+          text-align-last: end;
+          padding-right: 18px;
+        }
+
+        .unit {
+          $L-line-height: 20px;
+
+          line-height: $L-line-height;
+          font-size: 18px;
+          position: absolute;
+          right: 0px;
+          top: calc(50% - #{$L-line-height} / 2);
+        }
+      }
+
+      select,
+      input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $color-gray-800;
+        outline: none;
+        font-size: 18px;
+        text-align: center;
+        text-align-last: center;
+
+        &::placeholder {
+          color: $color-gray-400;
+        }
+
+        &.input-date {
+          width: 66%;
+          cursor: pointer;
+        }
+      }
+
+      select {
+        cursor: pointer;
+
+        &.disabled {
+          color: $color-gray-400;
+        }
+
+        option {
+          color: $color-black;
+
+          &[disabled] {
+            color: $color-gray-400;
+          }
+        }
+      }
+
+      .form-label {
+        font-size: 18px;
+        margin-right: 8px;
+        word-break: keep-all;
+      }
+
+      .earning-toggle,
+      .spending-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 14px;
+        border: 1px solid $color-sub-main;
+        border-radius: 4px;
+        font-size: 14px;
+        color: $color-main;
+        background-color: $color-white;
+        cursor: pointer;
+
+        &:last-child {
+          margin-left: 5px;
+        }
+
+        &.active {
+          color: $color-white;
+          border-color: $color-main;
+          background-color: $color-main;
+        }
+
+        &:hover {
+          color: $color-main;
+          border-color: $color-main;
+          background-color: $color-light-beige;
+        }
+      }
+    }
+
+    .button-submit {
+      border: none;
+      border-radius: 0 0 $L-border-radius $L-border-radius;
+      width: calc(100% + 2 * #{$L-padding});
+      height: 35px;
+      margin: 0 $L-padding * -1;
+      font-size: 17px;
+      color: $color-white;
+      background-color: $color-pink;
+
+      &.active {
+        background-color: $color-sub-main;
+
+        &:hover {
+          background-color: $color-main;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

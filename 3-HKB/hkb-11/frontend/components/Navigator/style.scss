@@ -1,0 +1,62 @@
+@use '@/static/styles/package' as *;
+
+#navigator {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  position: fixed;
+  width: 100vw;
+  top: $height-main;
+  left: 0;
+  z-index: 2000;
+  background-color: $color-white;
+
+  .rows {
+    .row {
+      align-items: center;
+      justify-content: center;
+
+      &.month-picker {
+        margin-bottom: 20px;
+
+        .month-link {
+          color: $color-sub-main;
+
+          &:hover {
+            color: $color-main;
+          }
+        }
+
+        .month {
+          font-size: 22px;
+          font-weight: 600;
+          margin: 0 20px;
+        }
+      }
+
+      &.page-picker {
+        width: $width-container - 20px;
+        margin-bottom: 10px;
+        background-color: $color-light-beige;
+        border-radius: 20px;
+        padding: 4px;
+
+        a {
+          flex: 1 1 0px;
+          display: flex;
+          justify-content: center;
+          font-size: 18px;
+          padding: 10px;
+          color: $color-gray-600;
+          cursor: pointer;
+
+          &.active {
+            color: $color-black;
+            background-color: $color-white;
+            border-radius: 18px;
+          }
+        }
+      }
+    }
+  }
+}

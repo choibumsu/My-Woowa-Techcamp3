@@ -1,0 +1,83 @@
+@use '@/static/styles/package' as *;
+#invoice-chart {
+  height: auto;
+  #chart-selector {
+    margin: 0 auto;
+    width: 30%;
+  }
+  #bar-chart {
+    position: relative;
+  }
+  #bar-display {
+    position: absolute;
+    background-color: $color-black;
+    color: $color-white;
+    border-radius: 4px;
+    opacity: 0;
+    font-size: 14px;
+    padding: 4px;
+
+    &:not(.transparent) {
+      opacity: 0.65;
+      transition-duration: 0.25s;
+    }
+  }
+}
+
+svg {
+  height: 400px;
+  width: 800px;
+}
+
+.grid-line {
+  stroke: lightgrey;
+  stroke-width: 1;
+}
+.grid-number {
+  vertical-align: center;
+  text-anchor: end;
+  font-size: 14;
+}
+.connection-line {
+  stroke: lightblue;
+  stroke-width: 2;
+}
+.date-circle {
+  stroke: black;
+  stroke-width: 2;
+  fill: white;
+  r: 3;
+  &:hover {
+    r: 4;
+  }
+}
+.header-3 {
+  font-size: 18px;
+  margin: 15px 0px;
+}
+.date-number {
+  font-size: 0.8rem;
+  text-anchor: middle;
+  &.selected {
+    opacity: 1;
+  }
+  &:not(.selected) {
+    opacity: 0.5;
+    transition-duration: 0.2s;
+  }
+}
+h3 {
+  font-size: 1.2rem;
+  margin: 10px;
+}
+.item-bar {
+  margin: 5px;
+}
+.item-color-bar {
+  background-color: grey;
+  margin-right: 10px;
+}
+
+.item-amount {
+  width: 100px;
+}

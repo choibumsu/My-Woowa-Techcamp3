@@ -1,0 +1,45 @@
+@use '@/static/styles/package' as *;
+
+#header {
+  margin-bottom: 180px;
+
+  #main-header {
+    align-items: center;
+    height: $height-main;
+    background-color: $color-main;
+    padding: 0 80px;
+    position: fixed;
+    z-index: 2000;
+    width: 100vw;
+    top: 0;
+
+    * {
+      color: $color-white;
+    }
+
+    .item {
+      &.left {
+        align-items: center;
+
+        .main-title {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+
+      &.right {
+        align-items: center;
+
+        * {
+          font-size: 14px;
+        }
+
+        .button-payment-modal {
+          background-color: transparent;
+          border: none;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

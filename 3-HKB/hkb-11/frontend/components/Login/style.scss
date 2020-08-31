@@ -1,0 +1,43 @@
+@use '@/static/styles/package' as *;
+
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-main;
+
+  .rows {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: $color-white;
+
+    .row {
+      justify-content: space-between;
+
+      input {
+        width: 350px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $color-gray-800;
+        outline: none;
+        font-size: 18px;
+        margin-bottom: 8px;
+
+        &::placeholder {
+          color: $color-gray-400;
+        }
+      }
+
+      button {
+        width: calc(50% - 10px);
+        border: none;
+        background-color: $color-light-beige;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 18px;
+      }
+    }
+  }
+}
